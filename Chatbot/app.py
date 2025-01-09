@@ -25,11 +25,6 @@ if st.button('Submit'):
     response = llm.invoke(query)
     st.write(f'{response}')
 
-# if query:
-#     st.chat_message(User).write(query)
-#     response = llm.invoke(query)
-#     st.chat_message(Chatbot).write(response)
-
 # open_api_key = os.getenv('OPENAI_KEY')    
 
 # llm= ChatOpenAI(api_key=open_api_key)
