@@ -1,0 +1,9 @@
+langchain-core
+langchain-community
+langchain-openai
+langchain-google-genai
+langchain-experimental
+faiss-cpu
+streamlit
+pandas
+pillow
