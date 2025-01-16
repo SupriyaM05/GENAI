@@ -1,22 +1,20 @@
 import os
-from langchain_openai import ChatOpenAI
-from langchain_google_genai import GoogleGenerativeAI
 from dotenv import load_dotenv
+import streamlit as st
+
 
 load_dotenv()
 
-# openai_api_key = os.getenv('OPENAI_KEY')
-
-# llm= ChatOpenAI(api_key=openai_api_key)    #created llm model
-
-google_api_key = os.getenv('Google_API_KEY')
-
-llm = GoogleGenerativeAI(model='gemini-1.5-flash',api_key=google_api_key)  # created llm model
-
-while True:
-    query= input("Enter the query:")    #access model
-    result= llm.invoke(query)
-    print(result)
+def main():
+    pages= { 
+        "Text generation": [st.Page("app.py", title="Text to Text")],
+        "Image generation": [st.Page("chatbot_image.py", title="Image to Text")],
+        "Audio generation": [st.Page("chatbot_audio.py", title="Audio to Text")],
+    }
                                      
+    selected_page= st.navigation(pages)
+    selected_page.run()
 
+if __name__ == "__main__":
+    main()
 
