@@ -1,1 +1,4 @@
 Chatbot/.env
+Rag_chatbot/.env
+Rag_chatbot/embeddings/vector_store/index.faiss
+Rag_chatbot/embeddings/vector_store/index.pkl
